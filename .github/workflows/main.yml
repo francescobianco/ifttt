@@ -11,4 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: make test
+      - env:
+          IFTTT_WEBHOOK_KEY: ${{ secret.IFTTT_WEBHOOK_KEY }}
+        run: make test
