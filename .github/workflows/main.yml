@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - env:
-          IFTTT_WEBHOOK_KEY: ${{ secret.IFTTT_WEBHOOK_KEY }}
+          IFTTT_WEBHOOK_KEY: ${{ secrets.IFTTT_WEBHOOK_KEY }}
         run: make test
